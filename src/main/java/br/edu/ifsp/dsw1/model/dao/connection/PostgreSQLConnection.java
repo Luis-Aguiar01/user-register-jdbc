@@ -1,4 +1,4 @@
-package br.edu.ifsp.dsw1.model.repository.connection;
+package br.edu.ifsp.dsw1.model.dao.connection;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

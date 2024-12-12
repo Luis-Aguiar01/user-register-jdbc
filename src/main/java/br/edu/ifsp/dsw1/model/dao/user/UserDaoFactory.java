@@ -1,4 +1,4 @@
-package br.edu.ifsp.dsw1.model.repository.dao;
+package br.edu.ifsp.dsw1.model.dao.user;
 
 public class UserDaoFactory {
 	

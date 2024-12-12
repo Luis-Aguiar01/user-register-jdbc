@@ -28,7 +28,7 @@
 				Falha no cadastro. Usuário com e-mail já cadastrado.
 			</div>
 		<% } %>
-
+			
 		<form action="application.do?action=cadastro" method="POST" class="flex flex-col">
 			<div class="flex items-center border rounded-lg mb-7 bg-gray-200 px-3">
 				<span class="material-icons text-gray-500">person</span>

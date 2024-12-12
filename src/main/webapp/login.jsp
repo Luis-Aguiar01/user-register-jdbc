@@ -30,7 +30,7 @@
 			
 			<div class="flex items-center border rounded-lg mb-7 bg-gray-200 px-3">
 				<span class="material-icons text-gray-500">lock</span>
-				<input class="px-3 py-4 bg-transparent outline-none text-base w-full" type="password" name="password" placeholder="Password" required/>
+				<input class="px-3 py-4 bg-transparent outline-none w-full" type="password" name="password" placeholder="Password" required/>
 			</div>
 			
 			<p class="self-center mb-4">Don't have an account? 

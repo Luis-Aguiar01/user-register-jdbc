@@ -1,10 +1,10 @@
-package br.edu.ifsp.dsw1.model.repository.dao;
+package br.edu.ifsp.dsw1.model.dao.user;
 
 import java.sql.SQLException;
 import java.util.List;
 
+import br.edu.ifsp.dsw1.model.dao.connection.PostgreSQLConnection;
 import br.edu.ifsp.dsw1.model.entity.User;
-import br.edu.ifsp.dsw1.model.repository.connection.PostgreSQLConnection;
 
 public final class PostgreUserDao implements UserDao {
 	
