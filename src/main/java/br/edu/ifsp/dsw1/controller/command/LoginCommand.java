@@ -31,7 +31,7 @@ public class LoginCommand implements Command {
 		
 		if (user != null && user.authenticate(email, encryptedPassowrd)) {
 			var session = request.getSession();
-			session.setAttribute("authenticate", true);
+			session.setAttribute("name", user.getName());
 			return "home.jsp";
 		}
 		
