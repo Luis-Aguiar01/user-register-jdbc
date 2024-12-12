@@ -19,11 +19,7 @@
 	<div class="flex flex-col p-10 w-1/2 bg-white">
 		<h1 class="self-center font-bold text-3xl mb-10">Register</h1>
 		
-		<% if (message != null && message.equals("true")) { %>
-			<div class="self-center justify-self-start mb-5 text-green-600 text-xl">
-				Cadastro efetuado com sucesso!
-			</div>
-		<% } else if (message != null && message.equals("false")) { %>
+		<% if (message != null && message.equals("false")) { %>
 			<div class="self-center justify-self-start mb-5 text-red-700 text-xl">
 				Falha no cadastro. Usuário com e-mail já cadastrado.
 			</div>

@@ -4,7 +4,7 @@
 	var name = session.getAttribute("name");
 
 	if (name == null) {
-		response.sendRedirect("application.do?action=login");
+		response.sendRedirect("application.do?action=login-page");
 		return;
 	}
 %>
@@ -18,12 +18,11 @@
 </head>
 
 <body class="bg-gradient-to-r from-black to-gray-800 min-h-screen flex flex-col font-mono items-center justify-center box-border">
-	<div class="border-solid border-2 bg-white rounded-lg w-2/3">
-		<h1 class="font-bold text-4xl text-center mt-10 leading-relaxed">Welcome, <%= name %></h1>
+	<div class="border-solid border-2 rounded-lg w-2/3">
+		<h1 class="font-bold text-4xl text-center mt-10 leading-relaxed text-gray-200">Welcome, <%= name %></h1>
 	
 		<div class="flex flex-col items-center p-10 mt-5">
-			<p class="text-xl text-center mb-10"></p>
-			<p class="text-xl text-center leading-relaxed"></p>
+			<p class="text-xl text-center leading-relaxed text-gray-200">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fermentum magna dignissim venenatis vulputate. Nunc risus urna, iaculis sed ipsum quis, rhoncus aliquet quam. Curabitur sollicitudin vel velit eu facilisis. Nulla elementum metus at nibh tempus, a placerat justo porttitor. Pellentesque cursus rutrum felis at fermentum. Donec id pellentesque ipsum.</p>
 		</div>
 		
 		<div class="flex font-bold text-white text-lg w-full justify-center gap-5 mb-10 mt-5">

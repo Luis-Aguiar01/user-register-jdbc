@@ -38,7 +38,7 @@ public class CadastroCommand implements Command {
 		var user = new User(name, email, encrypedPassword);
 		repository.save(user);
 		
-		return "cadastro.jsp?sucess=true";
+		return "login.jsp";
 	}
 	
 	private String encryptPassword(String password) throws NoSuchAlgorithmException, UnsupportedEncodingException {
