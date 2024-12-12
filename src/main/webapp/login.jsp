@@ -34,7 +34,7 @@
 			</div>
 			
 			<p class="self-center mb-4">Don't have an account? 
-				<a href="application.do?action=cadastro" class="text-blue-400 font-bold cursor-pointer hover:underline">
+				<a href="application.do?action=cadastro-page" class="text-blue-400 font-bold cursor-pointer hover:underline">
 					Click here to create account.
 				</a>
 			</p>

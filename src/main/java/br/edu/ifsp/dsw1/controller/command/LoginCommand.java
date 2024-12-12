@@ -20,9 +20,9 @@ public class LoginCommand implements Command {
 		if (user.authenticate(email, password)) {
 			var session = request.getSession();
 			session.setAttribute("isLogged", true);
-			return "initial-page.jsp";
+			return "home.jsp";
 		}
 		
-		return "login-page.jsp?sucess=false";
+		return "login.jsp?sucess=false";
 	}
 }

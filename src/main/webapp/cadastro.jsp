@@ -11,12 +11,13 @@
 <meta charset="UTF-8">
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=mail" />
 <title>Página de Cadastro</title>
 </head>
 <body class="flex flex-col justify-center items-center min-h-screen bg-gray-500 font-mono bg-gradient-to-r from-black to-gray-800">
 	
 	<div class="flex flex-col p-10 w-1/2 bg-white">
-		<h1 class="self-center font-bold text-3xl mb-10">Cadastro</h1>
+		<h1 class="self-center font-bold text-3xl mb-10">Register</h1>
 		
 		<% if (message != null && message.equals("true")) { %>
 			<div class="self-center justify-self-start mb-5 text-green-600 text-xl">
@@ -35,18 +36,18 @@
 			</div>
 			
 			<div class="flex items-center border rounded-lg mb-7 bg-gray-200 px-3">
-				<span class="material-icons text-gray-500">person</span>
-				<input class="px-3 py-4 bg-transparent outline-none w-full" type="text" name="email" placeholder="E-mail" required/>
+				<span class="material-symbols-outlined text-gray-500">mail</span>
+				<input class="px-3 py-4 bg-transparent outline-none w-full" type="email" name="email" placeholder="E-mail" required/>
 			</div>
 			
 			<div class="flex items-center border rounded-lg mb-7 bg-gray-200 px-3">
 				<span class="material-icons text-gray-500">lock</span>
-				<input class="px-3 py-4 bg-transparent outline-none text-base w-full" type="password" name="password" placeholder="Password" required/>
+				<input class="px-3 py-4 bg-transparent outline-none w-full" type="password" name="password" placeholder="Password" required/>
 			</div>
 			
-			<p class="self-center mb-4">Don't have an account? 
-				<a href="register.jsp" class="text-blue-400 font-bold cursor-pointer hover:underline">
-					Click here to create account.
+			<p class="self-center mb-4">Already have an account?
+				<a href="application.do?action=login-page" class="text-blue-400 font-bold cursor-pointer hover:underline">
+					Click here to log in.
 				</a>
 			</p>
 			

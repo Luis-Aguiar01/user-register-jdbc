@@ -3,9 +3,11 @@ package br.edu.ifsp.dsw1.controller;
 import java.io.IOException;
 
 import br.edu.ifsp.dsw1.controller.command.CadastroCommand;
+import br.edu.ifsp.dsw1.controller.command.CadastroPageCommand;
 import br.edu.ifsp.dsw1.controller.command.Command;
 import br.edu.ifsp.dsw1.controller.command.ErrorCommand;
 import br.edu.ifsp.dsw1.controller.command.LoginCommand;
+import br.edu.ifsp.dsw1.controller.command.LoginPageCommand;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -25,6 +27,10 @@ public class ApplicationServlet extends HttpServlet {
 			command = new CadastroCommand();
 		} else if ("login".equals(action)) {
 			command = new LoginCommand();
+		} else if ("login-page".equals(action)) {
+			command = new LoginPageCommand();
+		} else if ("cadastro-page".equals(action)) {
+			command = new CadastroPageCommand();
 		}
 		else {
 			command = new ErrorCommand();
