@@ -96,7 +96,7 @@ public final class PostgreUserDao implements UserDao {
 	}
 
 	@Override
-	public boolean update(User user) {
+	public boolean update(User user, String email) {
 		int rows = 0;
 		try {
 			var connection = PostgreSQLConnection.getConnection();
@@ -105,7 +105,7 @@ public final class PostgreUserDao implements UserDao {
 			statament.setString(1, user.getName());
 			statament.setString(2, user.getEmail());
 			statament.setString(3, user.getPassword());
-			statament.setString(4, user.getEmail());
+			statament.setString(4, email);
 			
 			rows = statament.executeUpdate();
 		}
