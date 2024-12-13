@@ -15,7 +15,7 @@ public class UserDaoFactory {
 	public UserDao factory() {
 		switch(userDaoType) {
 			case POSTGRE:
-				return new PostgreUserDao();
+				return new DatabaseUserDao();
 			default:
 				throw new IllegalArgumentException("Tipo inválido.");
 		}

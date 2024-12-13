@@ -4,17 +4,16 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-class PostgreSQLConnection {
+class MySQLConnection {
+	private static final String URL = "jdbc:mysql://localhost:3307/exercicio_jdbc";
+	private static final String USER = "root";
+	private static final String PASSWORD = "root";
 	
-	private static final String URL = "jdbc:postgresql://localhost:5432/exercicio_jdbc";
-	private static final String USER = "postgres";
-	private static final String PASSWORD = "Naruto123";
-	
-	private PostgreSQLConnection() {}
+	private MySQLConnection() {}
 	
 	static {
 		try {
-			Class.forName("org.postgresql.Driver");
+			Class.forName("com.mysql.cj.jdbc.Driver");
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		}

@@ -4,10 +4,10 @@ import java.sql.SQLException;
 import java.util.LinkedList;
 import java.util.List;
 
-import br.edu.ifsp.dsw1.model.dao.connection.PostgreSQLConnection;
+import br.edu.ifsp.dsw1.model.dao.connection.ConnectionFactory;
 import br.edu.ifsp.dsw1.model.entity.User;
 
-public final class PostgreUserDao implements UserDao {
+final class DatabaseUserDao implements UserDao {
 	
 	private static final String INSERT_USER_SQL = 
 			"INSERT INTO users (name, email, password) VALUES (?, ?, ?)";
@@ -27,7 +27,7 @@ public final class PostgreUserDao implements UserDao {
 	@Override
 	public void save(User user) {
 		try {
-			var connection = PostgreSQLConnection.getConnection();
+			var connection = new ConnectionFactory().factory();
 			var statament = connection.prepareStatement(INSERT_USER_SQL);
 			
 			statament.setString(1, user.getName());
@@ -47,7 +47,7 @@ public final class PostgreUserDao implements UserDao {
 	public User getByEmail(String email) {
 		User user = null;
 		try {
-			var connection = PostgreSQLConnection.getConnection();
+			var connection = new ConnectionFactory().factory();
 			var statament = connection.prepareStatement(GET_USER_BY_EMAIL_SQL);
 			
 			statament.setString(1, email);
@@ -74,7 +74,7 @@ public final class PostgreUserDao implements UserDao {
 	public List<User> getAll() {
 		var usersList = new LinkedList<User>();
 		try {
-			var connection = PostgreSQLConnection.getConnection();
+			var connection = new ConnectionFactory().factory();
 			var statament = connection.createStatement();
 			var result = statament.executeQuery(GET_ALL_USERS_SQL);
 			
@@ -99,7 +99,7 @@ public final class PostgreUserDao implements UserDao {
 	public boolean update(User user, String email) {
 		int rows = 0;
 		try {
-			var connection = PostgreSQLConnection.getConnection();
+			var connection = new ConnectionFactory().factory();
 			var statament = connection.prepareStatement(UPDATE_USER_SQL);
 			
 			statament.setString(1, user.getName());
@@ -120,7 +120,7 @@ public final class PostgreUserDao implements UserDao {
 	public boolean delete(String email) {
 		int rows = 0;
 		try {
-			var connection = PostgreSQLConnection.getConnection();
+			var connection = new ConnectionFactory().factory();
 			var statament = connection.prepareStatement(DELETE_USER_SQL);
 			
 			statament.setString(1, email);

@@ -20,7 +20,9 @@ public class CadastroCommand implements Command {
 		var name = request.getParameter("name");
 		var email = request.getParameter("email");
 		var password = request.getParameter("password");
+		
 		var repository = new UserDaoFactory().factory();
+		
 		String encrypedPassword;
 		
 		try {
