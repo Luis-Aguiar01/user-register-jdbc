@@ -5,7 +5,7 @@ public class UserDaoFactory {
 	private UserDaoType userDaoType;
 	
 	public UserDaoFactory() {
-		this.userDaoType = UserDaoType.POSTGRE;
+		this.userDaoType = UserDaoType.DATABASE;
 	}
 	
 	public UserDaoFactory(UserDaoType userDaoType) {
@@ -14,7 +14,7 @@ public class UserDaoFactory {
 	
 	public UserDao factory() {
 		switch(userDaoType) {
-			case POSTGRE:
+			case DATABASE:
 				return new DatabaseUserDao();
 			default:
 				throw new IllegalArgumentException("Tipo inválido.");
@@ -22,6 +22,6 @@ public class UserDaoFactory {
 	}
 	
 	public enum UserDaoType {
-		POSTGRE, MYSQL
+		DATABASE
 	}
 }

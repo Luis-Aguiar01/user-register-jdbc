@@ -8,7 +8,7 @@ public class ConnectionFactory {
 	private ConnectionType type;
 	
 	public ConnectionFactory() {
-		this.type = ConnectionType.MYSQL;
+		this.type = ConnectionType.POSTGRE;
 	}
 	
 	public ConnectionFactory(ConnectionType type) {

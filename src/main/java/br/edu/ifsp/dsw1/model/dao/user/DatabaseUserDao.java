@@ -58,7 +58,7 @@ final class DatabaseUserDao implements UserDao {
 				var name = result.getString("name");
 				var emailUser = result.getString("email");
 				var password = result.getString("password");
-				user = new User(name, emailUser, password);
+				user = new User(name, emailUser, password, true);
 			}
 			
 			connection.close();
@@ -82,7 +82,7 @@ final class DatabaseUserDao implements UserDao {
 				var name = result.getString("name");
 				var email = result.getString("email");
 				var password = result.getString("password");
-				var user = new User(name, email, password);
+				var user = new User(name, email, password, true);
 				usersList.add(user);
 			}
 			
