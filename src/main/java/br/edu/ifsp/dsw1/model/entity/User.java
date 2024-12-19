@@ -1,7 +1,7 @@
 package br.edu.ifsp.dsw1.model.entity;
 
-import br.edu.ifsp.dsw1.model.strategy.EncryptSHA256;
 import br.edu.ifsp.dsw1.model.strategy.EncryptStategy;
+import br.edu.ifsp.dsw1.model.strategy.FactoryEncryptStrategy;
 
 public final class User {
 	
@@ -13,7 +13,7 @@ public final class User {
 	public User(String name, String email, String password, boolean fromBD) {
 		this.name = name;
 		this.email = email;
-		this.strategy = new EncryptSHA256();
+		this.strategy = new FactoryEncryptStrategy().factory();
 		
 		if (fromBD) {
 			this.password = password;

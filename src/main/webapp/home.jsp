@@ -26,6 +26,7 @@
 		</div>
 		
 		<div class="flex font-bold text-white text-lg w-full justify-center gap-5 mb-10 mt-5">
+			<a href="application.do?action=update-page" class="bg-blue-700  w-1/4 py-4 px-4 text-center rounded-lg hover:bg-blue-500 cursor-pointer"><button>Atualizar</button></a>
 			<a href="application.do?action=logout" class="bg-red-700  w-1/4 py-4 px-4 text-center rounded-lg hover:bg-red-500 cursor-pointer"><button>Logout</button></a>
 		</div>
 	</div>	

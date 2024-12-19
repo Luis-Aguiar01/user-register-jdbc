@@ -9,6 +9,8 @@ import br.edu.ifsp.dsw1.controller.command.ErrorCommand;
 import br.edu.ifsp.dsw1.controller.command.LoginCommand;
 import br.edu.ifsp.dsw1.controller.command.LoginPageCommand;
 import br.edu.ifsp.dsw1.controller.command.LogoutCommand;
+import br.edu.ifsp.dsw1.controller.command.UpdateCommand;
+import br.edu.ifsp.dsw1.controller.command.UpdatePageCommand;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -34,7 +36,12 @@ public class ApplicationServlet extends HttpServlet {
 			command = new CadastroPageCommand();
 		} else if ("logout".equals(action)) {
 			command = new LogoutCommand();
-		} else {
+		} else if ("update-page".equals(action)) {
+			command = new UpdatePageCommand();
+		} else if ("update".equals(action)) {
+			command = new UpdateCommand();
+		}
+		else {
 			command = new ErrorCommand();
 		}
 		

@@ -15,7 +15,7 @@
 <title>Página de Cadastro</title>
 </head>
 <body class="flex flex-col justify-center items-center min-h-screen bg-gray-500 font-mono bg-gradient-to-r from-black to-gray-800">
-	
+
 	<div class="flex flex-col p-10 w-1/2 bg-white">
 		<h1 class="self-center font-bold text-3xl mb-10">Register</h1>
 		

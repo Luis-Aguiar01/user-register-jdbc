@@ -2,7 +2,7 @@ package br.edu.ifsp.dsw1.model.strategy;
 
 import java.security.MessageDigest;
 
-public final class EncryptSHA256 implements EncryptStategy {
+final class EncryptSHA256 implements EncryptStategy {
 	
 	public String encrypt(String password) {
 		var encryptedPassword = "";
